@@ -1,186 +1,175 @@
-<!DOCTYPE html>
-<html lang="zh-HK">
+<!doctype html>
+<html lang="zh-Hant">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>私隱政策 · 症狀日誌 Symptom Diary</title>
+<title>我們日記 — 私隱政策 / Privacy Policy</title>
 <style>
   :root {
-    --brand: #16B0C2;
-    --teal-700: #11707E;
-    --ink-900: #0C2A33;
-    --ink-500: #4D6B74;
-    --ink-300: #95ABB1;
-    --gray-50: #F5F9FA;
-    --gray-200: #DEE8EA;
+    --ink: #0e121b; --sub: #525866; --soft: #99a0ae;
+    --line: #e1e4ea; --weak: #f5f7fa; --accent: #7d52f4;
   }
   * { box-sizing: border-box; }
   body {
-    margin: 0;
-    padding: 48px 20px 96px;
-    font: 16px/1.7 -apple-system, BlinkMacSystemFont, "PingFang HK",
-          "Helvetica Neue", Arial, sans-serif;
-    color: var(--ink-900);
-    background: var(--gray-50);
+    margin: 0; padding: 48px 20px 96px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang HK",
+                 "Noto Sans TC", Helvetica, Arial, sans-serif;
+    color: var(--ink); background: #fff; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
   }
-  main { max-width: 720px; margin: 0 auto; }
-  h1 { font-size: 30px; letter-spacing: -0.02em; margin: 0 0 6px; }
-  .sub { color: var(--ink-500); font-size: 14px; margin: 0 0 28px; }
-  .rule { height: 3px; background: var(--brand); border-radius: 2px; margin-bottom: 36px; }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .mark {
+    width: 52px; height: 52px; border-radius: 15px; background: var(--accent);
+    display: flex; align-items: center; justify-content: center; margin-bottom: 20px;
+  }
+  h1 { font-size: 28px; line-height: 1.3; margin: 0 0 6px; letter-spacing: -0.01em; }
+  .updated { color: var(--soft); font-size: 14px; margin: 0 0 8px; }
+  .lede { color: var(--sub); font-size: 16px; margin: 0 0 40px; }
   h2 {
-    font-size: 21px; margin: 40px 0 20px; padding-top: 28px;
-    border-top: 1px solid var(--gray-200);
+    font-size: 19px; margin: 40px 0 12px; padding-top: 26px;
+    border-top: 1px solid var(--line); letter-spacing: -0.01em;
   }
-  h3 { font-size: 16px; margin: 28px 0 8px; color: var(--teal-700); }
-  p { margin: 0 0 14px; }
-  ul { margin: 0 0 14px; padding-left: 22px; }
+  h2:first-of-type { border-top: 0; padding-top: 0; }
+  h3 { font-size: 15px; margin: 24px 0 6px; }
+  p, li { color: var(--sub); font-size: 15px; }
+  ul { padding-left: 22px; }
   li { margin-bottom: 6px; }
+  strong { color: var(--ink); font-weight: 600; }
   .callout {
-    background: #ECFCFD; border-left: 4px solid var(--brand);
-    padding: 16px 18px; border-radius: 8px; margin: 20px 0;
+    background: var(--weak); border-radius: 14px; padding: 18px 20px; margin: 20px 0;
   }
-  .callout strong { color: var(--teal-700); }
-  table { border-collapse: collapse; width: 100%; margin: 0 0 16px; font-size: 15px; }
-  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--gray-200); vertical-align: top; }
-  th { color: var(--teal-700); font-size: 13px; text-transform: uppercase; letter-spacing: 0.04em; }
+  .callout p { margin: 0; color: var(--ink); }
+  table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--ink); font-weight: 600; background: var(--weak); }
+  td { color: var(--sub); }
+  a { color: var(--accent); }
   footer {
-    margin-top: 48px; padding-top: 20px;
-    border-top: 1px solid var(--gray-200);
-    color: var(--ink-300); font-size: 13px;
+    margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--line);
+    color: var(--soft); font-size: 13px;
   }
-  a { color: var(--teal-700); }
   @media (prefers-color-scheme: dark) {
-    :root { --gray-50: #0C2A33; --gray-200: #1F4651; --ink-900: #F5F9FA; --ink-500: #A6B8BD; }
-    .callout { background: #133E47; }
+    :root { --ink: #f2f4f8; --sub: #b3b9c6; --soft: #7d8494; --line: #2a2f3a; --weak: #171a21; }
+    body { background: #0e121b; }
+    th { background: var(--weak); }
   }
 </style>
 </head>
 <body>
-<main>
+<div class="wrap">
 
-  <h1>私隱政策 · Privacy Policy</h1>
-  <p class="sub">症狀日誌 (Symptom Diary) · 最後更新：2026年8月8日 · Last updated: 8 August 2026</p>
-  <div class="rule"></div>
-
-  <div class="callout">
-    <strong>一句講晒：</strong>你嘅健康記錄——症狀、嚴重程度、備註、相片——永遠留喺你部 iPhone，唔會上傳。我哋淨係收集匿名嘅 app 使用數據（你開過邊個畫面、撳過邊類掣），可以隨時喺「設定」關掉。<br><br>
-    <strong>In one line:</strong> your health records never leave your iPhone. We collect anonymous app-usage data only — which screens you opened, which kinds of buttons you pressed — and you can switch it off in Settings.
+  <div class="mark" aria-hidden="true">
+    <svg width="28" height="28" viewBox="0 0 48 48" fill="none">
+      <path d="M24 41.5C11.2 33.6 5.5 27 5.5 20A9.2 9.2 0 0 1 24 15.6 9.2 9.2 0 0 1 42.5 20c0 7-5.7 13.6-18.5 21.5z" fill="#fff"/>
+    </svg>
   </div>
 
-  <h2>中文</h2>
+  <h1>我們日記 私隱政策</h1>
+  <p class="updated">最後更新：2026 年 8 月 9 日</p>
+  <p class="lede">呢份政策講清楚「我們日記」（Our Diary）iOS App 收集咩、唔收集咩，同埋你可以點樣控制自己嘅資料。</p>
 
-  <h3>我哋收集咩、唔收集咩</h3>
+  <div class="callout">
+    <p><strong>一句話總結：</strong>你寫嘅日記內容 —— 文字、相片、語音記錄、地點、心情、貼紙 —— 全部只儲存喺你部 iPhone 入面，唔會上傳去任何伺服器，我哋亦睇唔到。App 只會傳送匿名嘅使用統計（例如「有人儲存咗一篇日記」同字數），永遠唔會包含日記內容。</p>
+  </div>
+
+  <h2>1. 邊個負責</h2>
+  <p>本 App 由 <strong>toysky731</strong>開發及提供。如對本政策有任何疑問，可電郵至 <a href="mailto:toysky731@icloud.com">toysky731@icloud.com</a>。</p>
+
+  <h2>2. 留喺你部裝置、我哋完全接觸唔到嘅資料</h2>
+  <p>以下所有內容只會寫入你 iPhone 上本 App 嘅私人儲存空間。佢哋<strong>唔會</strong>傳送到我哋或任何第三方：</p>
+  <ul>
+    <li><strong>日記文字</strong> —— 你寫嘅每一個字</li>
+    <li><strong>相片</strong> —— 你由相簿揀嚟貼入日記、做貼紙或做月曆背景嘅圖片</li>
+    <li><strong>語音記錄</strong> —— 你錄低嘅聲音檔</li>
+    <li><strong>地點名稱</strong> —— 你自己輸入，或者由 App 將 GPS 座標轉換成嘅地區名（例如「西貢」）</li>
+    <li><strong>心情、貼紙、月結一句話</strong></li>
+  </ul>
+  <p>因為呢啲資料從來冇離開過你部機，我哋<strong>冇能力</strong>閱讀、備份、還原或者交俾任何人。</p>
+
+  <h3>關於位置</h3>
+  <p>當你喺寫日記時撳位置按鈕，App 會取得一次你嘅大概位置，並即場轉換成地區名稱。<strong>座標唔會被儲存，亦唔會傳送出去</strong>；只有轉換後嘅名稱會寫入你嘅日記，而佢一樣只留喺部機。你亦可以完全唔用定位，自己打字輸入地點。</p>
+
+  <h3>關於相片同麥克風</h3>
+  <p>App 使用 iOS 系統嘅相片選擇器，只會拿到你主動揀嘅相片，唔會存取你整個相簿。麥克風只會喺你按下錄音時啟用，錄成嘅檔案直接寫入部機。</p>
+
+  <h2>3. 我哋會收集嘅資料</h2>
+
+  <h3>3.1 帳戶</h3>
+  <p>如果你用「以 Apple 帳戶登入」，Apple 會提供一個<strong>專屬於本 App 嘅匿名使用者識別碼</strong>。我哋將佢儲存喺你部機嘅 Keychain，用嚟識別你嘅帳戶。我哋<strong>唔會</strong>收到你嘅真實電郵地址或姓名（除非 Apple 介面上你主動選擇分享，而本 App 目前並無要求）。</p>
+
+  <h3>3.2 使用統計（分析）</h3>
+  <p>我哋使用 <a href="https://posthog.com/privacy" target="_blank" rel="noopener">PostHog</a>（伺服器位於歐盟）收集匿名使用統計，用途只限於了解邊啲功能有人用、改善 App。傳送嘅內容如下：</p>
+
   <table>
-    <tr><th>絕對唔會離開你部機</th><th>會收集（匿名）</th></tr>
-    <tr>
-      <td>
-        症狀名稱<br>
-        嚴重程度<br>
-        備註內容<br>
-        相片<br>
-        記錄日期同次數
-      </td>
-      <td>
-        你開過邊個畫面<br>
-        你撳過邊<em>類</em>掣<br>
-        app 打開咗
-      </td>
-    </tr>
+    <thead>
+      <tr><th>事件</th><th>會傳送</th><th>唔會傳送</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>儲存日記</td>
+        <td>字數（數字）、貼紙數量、心情分數、有冇相片／語音／地點（是／否）、所用內置貼紙嘅代號</td>
+        <td>日記內文、地點名稱、相片、語音</td>
+      </tr>
+      <tr>
+        <td>建立自訂貼紙</td>
+        <td>你總共有幾多張自訂貼紙</td>
+        <td>貼紙名稱、貼紙圖片</td>
+      </tr>
+      <tr>
+        <td>錄音</td>
+        <td>長度（秒）</td>
+        <td>錄音內容</td>
+      </tr>
+      <tr>
+        <td>使用定位</td>
+        <td>「曾經成功定位」呢個事實</td>
+        <td>座標、地點名稱</td>
+      </tr>
+      <tr>
+        <td>寫月結一句話</td>
+        <td>字數（數字）</td>
+        <td>句子內容</td>
+      </tr>
+      <tr>
+        <td>登入、完成設定、開啟月結、更換月曆背景</td>
+        <td>事件發生咗、所選主題（女生／男生）</td>
+        <td>—</td>
+      </tr>
+    </tbody>
   </table>
 
-  <h3>你嘅健康記錄</h3>
-  <p>你喺應用程式入面輸入嘅所有健康資料——症狀名稱、日期、嚴重程度、時段、備註、相片——<strong>只會儲存喺你部裝置入面</strong>，唔會上傳到我哋或者任何第三方嘅伺服器。冇雲端同步，冇伺服器儲存。</p>
+  <p>PostHog SDK 亦會自動記錄裝置型號、iOS 版本、App 版本、語言、大約地區（由 IP 推算），以及 App 開啟／關閉等基本事件。</p>
+  <p>我哋<strong>已經關閉</strong> PostHog 嘅畫面錄影（session replay）同自動點擊記錄（autocapture）功能，因為呢啲功能會拍到你嘅日記畫面。</p>
 
-  <h3>匿名使用數據</h3>
-  <p>為咗知道邊啲功能有人用、應該點改善，我哋會收集<strong>匿名嘅使用數據</strong>，由 PostHog 處理，伺服器喺<strong>歐盟</strong>。</p>
-  <p><strong>會 send 出去嘅：</strong>你打開咗邊個畫面（例如「今日」、「趨勢」、「設定」）、撳過邊類掣（例如儲存記錄、匯出報告）。</p>
-  <p><strong>絕對唔會 send 出去嘅：</strong>症狀名稱、嚴重程度、備註內容、相片、日期，以及你有幾多個症狀或者記錄。技術上，每個事件只係一個固定名單入面嘅名，冇任何附帶資料——即係話就算想 send 都 send 唔到。</p>
-  <p>呢個功能預設係開嘅，第一次開 app 嗰陣會清楚話你知。你可以喺<strong>設定 → 使用數據</strong>隨時關掉。</p>
+  <h3>3.3 我哋唔會做嘅事</h3>
+  <ul>
+    <li>唔會做跨 App 或跨網站追蹤，亦唔會使用 Apple 嘅廣告識別碼（IDFA）</li>
+    <li>唔會出售、出租或者將你嘅資料用作廣告用途</li>
+    <li>唔會將你嘅資料分享俾第三方，除咗上述嘅分析服務供應商，或者法律強制要求嘅情況</li>
+  </ul>
 
-  <h3>Apple 帳戶登入</h3>
-  <p>登入係<strong>可選</strong>嘅——唔登入一樣可以用晒所有功能。如果你選擇用 Apple 帳戶登入，我哋只會喺你部機入面記低 Apple 俾嘅一個匿名識別碼（同埋你選擇提供嘅名）。呢個識別碼唔會上傳，亦都唔會同你嘅健康記錄一齊處理。你可以隨時喺設定度登出。</p>
+  <h2>4. 資料保存同刪除</h2>
+  <p>你隨時可以喺 App 內 <strong>設定 → 刪除帳戶同所有資料</strong>，一次過永久刪除呢部裝置上嘅所有日記、相片、語音記錄同自訂貼紙，並同時登出帳戶。因為內容只存在你部機，刪除後我哋亦<strong>冇任何備份可以還原</strong>，操作無法復原。</p>
+  <p>直接由 iPhone 刪除本 App，效果相同：所有資料會隨 App 一併移除。</p>
+  <p>已經傳送咗嘅匿名使用統計無法逐條對應返你，如果你希望我哋刪除相關記錄，請電郵聯絡我哋。</p>
 
-  <h3>備份</h3>
-  <p>如果你開咗 iPhone 或者 iCloud 備份，你嘅記錄會跟住 Apple 嘅裝置備份一齊備份，並由 Apple 加密。呢個係 iOS 系統功能，唔係我哋提供嘅服務，而我哋亦都接觸唔到啲資料。</p>
+  <h2>5. 兒童</h2>
+  <p>本 App 並非為 13 歲以下兒童而設，我哋亦唔會有意識地收集兒童嘅個人資料。</p>
 
-  <h3>分享</h3>
-  <p>「匯出畀醫生」會喺你部裝置上面即時製作一份 PDF，然後交畀 iOS 嘅分享功能。要唔要分享、分享畀邊個，完全由你決定。我哋收唔到、亦都睇唔到呢份檔案。</p>
+  <h2>6. 你嘅權利</h2>
+  <p>視乎你所在地區（例如歐洲經濟區嘅 GDPR、香港嘅《個人資料（私隱）條例》），你可能有權查閱、更正或刪除我哋持有嘅個人資料，或反對某啲處理方式。由於日記內容從來冇離開過你部裝置，呢部分嘅資料你本身已經完全控制。就分析資料方面，請電郵聯絡我哋。</p>
 
-  <h3>刪除</h3>
-  <p>喺應用程式入面刪除記錄，就會即刻喺你部裝置永久刪除。刪除整個應用程式，就會刪除所有健康記錄同埋本機儲存嘅登入識別碼。</p>
-  <p>至於已經收集咗嘅匿名使用數據：因為嗰啲數據冇任何識別到你嘅資料，我哋無法從中搵返你嘅記錄嚟刪除。如果你想停止收集，喺設定度關掉就得。</p>
+  <h2>7. 政策更新</h2>
+  <p>如果本政策有重大修改，我哋會更新本頁最上方嘅「最後更新」日期。建議你不時查看。</p>
 
-  <h3>兒童</h3>
-  <p>本應用程式唔會針對 13 歲以下兒童，亦都唔會刻意向佢哋收集資料。上面所講嘅匿名使用數據唔包含任何可以識別身份嘅資料。</p>
-
-  <h3>醫療免責聲明</h3>
-  <p>呢個應用程式係一本由你自己填寫嘅日記。<strong>佢唔會、亦都唔可以診斷、治療或者提供任何醫療意見。</strong>任何健康上嘅決定，請諮詢註冊醫護人員。</p>
-
-  <h3>政策更新</h3>
-  <p>如果呢份政策有更新，日期會喺上面改咗，新版本亦都會喺呢一頁刊登。</p>
-
-  <h3>聯絡</h3>
-  <p>如有查詢：<a href="mailto:REPLACE_WITH_YOUR_EMAIL">REPLACE_WITH_YOUR_EMAIL</a></p>
-
-  <h2>English</h2>
-
-  <h3>What we collect and what we don't</h3>
-  <table>
-    <tr><th>Never leaves your device</th><th>Collected (anonymous)</th></tr>
-    <tr>
-      <td>
-        Symptom names<br>
-        Severity values<br>
-        Note contents<br>
-        Photos<br>
-        Entry dates and counts
-      </td>
-      <td>
-        Which screens you opened<br>
-        Which <em>kinds</em> of buttons you pressed<br>
-        That the app was opened
-      </td>
-    </tr>
-  </table>
-
-  <h3>Your health records</h3>
-  <p>Everything you enter — symptom names, dates, severity, time of day, notes, photos — is <strong>stored only on your device</strong> and is never uploaded to our servers or any third party's. There is no cloud sync and no server-side storage.</p>
-
-  <h3>Anonymous usage data</h3>
-  <p>To understand which features are used and what to improve, we collect <strong>anonymous usage data</strong>, processed by PostHog on servers in the <strong>EU</strong>.</p>
-  <p><strong>What is sent:</strong> which screens you opened (e.g. Today, Trends, Settings) and which kinds of buttons you pressed (e.g. save entry, export report).</p>
-  <p><strong>What is never sent:</strong> symptom names, severities, note contents, photos, dates, or how many symptoms or entries you have. Technically each event is a name drawn from a fixed list with no attached payload, so health data cannot be transmitted even by mistake.</p>
-  <p>This is on by default and clearly disclosed the first time you open the app. You can turn it off at any time in <strong>Settings → 使用數據</strong>.</p>
-
-  <h3>Sign in with Apple</h3>
-  <p>Signing in is <strong>optional</strong> — every feature works without it. If you do sign in, we store only the anonymous identifier Apple provides (and a name, if you choose to share one) locally on your device. It is never uploaded and is never processed alongside your health records. You can sign out at any time in Settings.</p>
-
-  <h3>Backups</h3>
-  <p>If you use iPhone or iCloud device backup, your records are included in Apple's encrypted device backup. That is an iOS system feature rather than a service we provide, and we have no access to it.</p>
-
-  <h3>Sharing</h3>
-  <p>“匯出畀醫生” (Export for doctor) generates a PDF on your device and hands it to the iOS share sheet. Whether to share it, and with whom, is entirely your choice. We neither receive nor can see that file.</p>
-
-  <h3>Deletion</h3>
-  <p>Deleting a record in the app removes it permanently from your device immediately. Deleting the app removes all health records and the locally stored sign-in identifier.</p>
-  <p>As for usage data already collected: because it contains nothing that identifies you, we cannot locate your events in order to delete them. If you want collection to stop, switch it off in Settings.</p>
-
-  <h3>Children</h3>
-  <p>This app is not directed at children under 13 and we do not knowingly collect data from them. The anonymous usage data described above contains no identifying information.</p>
-
-  <h3>Medical disclaimer</h3>
-  <p>This app is a diary you fill in yourself. <strong>It does not and cannot diagnose, treat, or provide medical advice.</strong> Please consult a qualified healthcare professional for any health decision.</p>
-
-  <h3>Changes to this policy</h3>
-  <p>If this policy changes, the date above will be updated and the revised version posted on this page.</p>
-
-  <h3>Contact</h3>
-  <p>Questions: <a href="mailto:REPLACE_WITH_YOUR_EMAIL">REPLACE_WITH_YOUR_EMAIL</a></p>
+  <h2>8. 聯絡我哋</h2>
+  <p>電郵：<a href="toysky731@icloud.com">toysky731@icloud.com</a></p>
 
   <footer>
-    症狀日誌 · Symptom Diary — 健康記錄只留喺你部裝置。Health records stay on your device.
+    我們日記 (Our Diary) · toysky731<br>
+    本頁同時作為 App Store 所要求嘅私隱政策網址。
   </footer>
 
-</main>
+</div>
 </body>
 </html>
